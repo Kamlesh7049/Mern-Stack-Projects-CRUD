@@ -1,0 +1,71 @@
+{
+  "employees": [
+    {
+      "empno": 1001,
+      "name": "Kamlesh",
+      "dep": "Developer",
+      "city": "Bhopal",
+      "salary": 35000,
+      "id": "3cf8"
+    },
+    {
+      "empno": 1002,
+      "name": "Shani",
+      "dep": "Frontend Developer",
+      "city": "Bhopal",
+      "salary": 25000,
+      "id": "3422"
+    },
+    {
+      "empno": 1003,
+      "name": "Anurag",
+      "dep": " PythonDeveloper",
+      "city": "Bhopal",
+      "salary": 22000,
+      "id": "e0e1"
+    },
+    {
+      "id": "4fb8",
+      "empno": "1004",
+      "name": "Nitin",
+      "dep": "Testing",
+      "city": "Bhopal",
+      "salary": "20000"
+    },
+    {
+      "id": "83dd",
+      "empno": "1005",
+      "name": "Ankita",
+      "dep": "Hr",
+      "city": "Indore",
+      "salary": "15000"
+    },
+    {
+      "id": "fce5",
+      "empno": "1006",
+      "name": "Priyanka",
+      "dep": "Digital",
+      "city": "Jabalpur",
+      "salary": "10000"
+    },
+    {
+      "id": "2a78"
+    },
+    {
+      "id": "81ea",
+      "empno": "1007",
+      "name": "Ravi",
+      "dep": "Manger",
+      "city": "Bangalore",
+      "salary": "55000"
+    },
+    {
+      "id": "65cc",
+      "empno": "108",
+      "name": "Ashish",
+      "dep": "Trainer",
+      "city": "Pune",
+      "salary": "85000"
+    }
+  ]
+}
