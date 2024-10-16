@@ -21,6 +21,28 @@ catch(error){
 }
 }
 
+const empDatadisplay=async(req,res)=>{
+    try{
+    const Employeedata=await EmpModel.find();
+    // console.log("Data Successfully Display!")
+    res.status(200).json(Employeedata);
+
+    }
+    
+    catch(error){
+        res.status(404).json("Data from MongoDB not Found!!!")
+    }
+    
+}
+const empSearch =async(req,res)=>{
+     let ={empno}=req.body;
+     const myData=await EmpModel.find({empno:empno})
+    //  console.log("ok")
+    //  res.send("Chal gya!!")
+     res.send(myData)
+}
 module.exports={
-     empDataSave
+     empDataSave,
+     empDatadisplay,
+     empSearch
 }

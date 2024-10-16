@@ -23,6 +23,9 @@ const Header = () => {
               <Nav.Link as={Link} to="/display" className="nav-link-custom">
                 Display
               </Nav.Link>
+              <Nav.Link as={Link} to="/search" className="nav-link-custom">
+                Search
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
