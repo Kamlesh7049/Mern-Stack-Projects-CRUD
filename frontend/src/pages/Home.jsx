@@ -1,102 +1,140 @@
 const Home = () => {
-    return (
-      <>
-        <div className="home-container">
-          <div className="overlay">
-            <div className="content">
-              <h1>Welcome to Home Page!</h1>
-              <p>Your portal to manage employee data efficiently and smoothly.</p>
-              <a href="/insert" className="btn-primary">
-                Add Employee
-              </a>
-              <a href="/display" className="btn-secondary">
-                View Employees
-              </a>
-            </div>
+  return (
+    <>
+      <div className="home-container">
+        <div className="content-container">
+          <h2>Welcome to Your Employee Portal</h2>
+          <p>Efficiently manage and track employee data in one place.</p>
+          <div className="button-group">
+            <a href="/insert" className="btn btn-primary">
+              Add Employee
+            </a>
+            <a href="/display" className="btn btn-secondary">
+              View Employees
+            </a>
           </div>
         </div>
-  
-        <style jsx>{`
+        <div className="image-container">
+          <img
+            src="https://media.licdn.com/dms/image/D4D12AQEBEsIJX8mtHg/article-cover_image-shrink_720_1280/0/1702198866773?e=2147483647&v=beta&t=3_pyHt0P7c44VQNsAYpqjVnWhlWErZcpK72WyW5xiXk"
+            alt="IT Company"
+            className="side-image"
+          />
+        </div>
+      </div>
+
+      <style jsx>{`
+        .home-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f8f9fa;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+
+        .content-container {
+          flex: 1;
+          color: #343a40;
+          text-align: left;
+          padding: 20px;
+        }
+
+        h2 {
+          font-size: 2.5rem;
+          font-weight: 600;
+          margin-bottom: 15px;
+          color: #343a40;
+          letter-spacing: 1px;
+        }
+
+        p {
+          font-size: 1.25rem;
+          margin-bottom: 40px;
+          color: #6c757d;
+          line-height: 1.5;
+        }
+
+        .button-group {
+          display: flex;
+          gap: 20px;
+        }
+
+        .btn {
+          padding: 15px 30px;
+          font-size: 1rem;
+          font-weight: bold;
+          border-radius: 50px;
+          text-decoration: none;
+          transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .btn-primary {
+          background-color: #28a745;
+          color: #fff;
+        }
+
+        .btn-primary:hover {
+          background-color: #218838;
+          transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+          background-color: #007bff;
+          color: #fff;
+        }
+
+        .btn-secondary:hover {
+          background-color: #0056b3;
+          transform: translateY(-3px);
+        }
+
+        .image-container {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .side-image {
+          max-width: 100%;
+          height: auto;
+          border-radius: 15px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 768px) {
           .home-container {
-            background-image: url('https://via.placeholder.com/1920x1080');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            color: #fff;
+            flex-direction: column;
             text-align: center;
           }
-  
-          .overlay {
-            background-color: rgba(0, 0, 0, 0.6);
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+
+          .image-container {
+            margin-top: 20px;
           }
-  
-          .content {
-            position: relative;
-            z-index: 1;
+
+          h2 {
+            font-size: 2rem;
           }
-  
-          h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-          }
-  
+
           p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+            font-size: 1.1rem;
           }
-  
-          .btn-primary,
-          .btn-secondary {
-            display: inline-block;
-            padding: 15px 30px;
-            margin: 10px;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease-in-out;
+
+          .btn {
+            padding: 12px 25px;
+            font-size: 0.9rem;
           }
-  
-          .btn-primary {
-            background-color: #28a745;
-            color: white;
+
+          .button-group {
+            flex-direction: column;
+            gap: 10px;
           }
-  
-          .btn-primary:hover {
-            background-color: #218838;
-          }
-  
-          .btn-secondary {
-            background-color: #007bff;
-            color: white;
-          }
-  
-          .btn-secondary:hover {
-            background-color: #0056b3;
-          }
-  
-          @media screen and (max-width: 768px) {
-            h1 {
-              font-size: 2.5rem;
-            }
-  
-            p {
-              font-size: 1.2rem;
-            }
-          }
-        `}</style>
-      </>
-    );
-  };
-  
-  export default Home;
-  
+        }
+      `}</style>
+    </>
+  );
+};
+
+export default Home;

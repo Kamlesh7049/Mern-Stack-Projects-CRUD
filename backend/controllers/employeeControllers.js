@@ -41,8 +41,16 @@ const empSearch =async(req,res)=>{
     //  res.send("Chal gya!!")
      res.send(myData)
 }
+const employeeUpdateDisplay=async(req,res)=>{
+    const Data=await EmpModel.find();
+    // console.log("Done")
+    // res.send("Updated data!!!!")
+    res.send(Data);
+
+}
 module.exports={
      empDataSave,
      empDatadisplay,
-     empSearch
+     empSearch,
+     employeeUpdateDisplay
 }

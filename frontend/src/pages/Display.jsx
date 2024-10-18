@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import axios from "axios";
+import Table from 'react-bootstrap/Table';
 
 const Display=()=>{
   const[mydata,setMydata]=useState([]);
@@ -34,8 +35,8 @@ const Display=()=>{
   return(
     <>
     <center>
-    <h1>Display Employee Records</h1>
-    <table>
+    <h4>Display Employee Records</h4>
+    {/* <table border={1}>
       <tr>
         <th>Employee No</th>
         <th>Name</th>
@@ -44,7 +45,20 @@ const Display=()=>{
         <th>Salary</th>
       </tr>
       {ans}
-    </table>
+    </table> */}
+{/* -------------------------------------------------------------- */}
+     <Table responsive="sm">
+        <thead>
+          <tr>
+            <th>Employee No</th>
+            <th>Name</th>
+            <th>Degignation</th>
+            <th>City</th>
+            <th>Salary</th>
+          </tr>
+          {ans}
+          </thead>
+          </Table>
     </center>
     </>
   )
