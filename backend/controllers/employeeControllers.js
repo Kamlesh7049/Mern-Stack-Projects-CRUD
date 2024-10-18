@@ -48,9 +48,26 @@ const employeeUpdateDisplay=async(req,res)=>{
     res.send(Data);
 
 }
+const employeeDataDelete=async(req,res)=>{
+   const myid=req.body.id;
+   const employee=await EmpModel.findByIdAndDelete(myid);
+   console.log("ok")
+//    res.send("chal ja")
+   res.send("record deleted!!")
+}
+
+const employeeEditData=async(req,res)=>{
+    const id=req.body.id;
+    const empdata=await EmpModel.findById(id);
+    // res.send("Done")
+    // console.log("Done")
+    res.send(empdata)
+}
 module.exports={
      empDataSave,
      empDatadisplay,
      empSearch,
-     employeeUpdateDisplay
+     employeeUpdateDisplay,
+     employeeDataDelete,
+     employeeEditData
 }
