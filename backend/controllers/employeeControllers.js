@@ -63,11 +63,35 @@ const employeeEditData=async(req,res)=>{
     // console.log("Done")
     res.send(empdata)
 }
+const employeeEditSave=async(req,res)=>{
+    const {_id, empno,empname, degignation,city,salary}=req.body;
+    const employeedata=await EmpModel.findByIdAndUpdate(_id,{
+        empno:empno,
+        empname:empname,
+        degignation: degignation,
+        city:city,
+        salary:salary
+    })
+ res.send("Data Successfully Updated!!")
+}
+ const employeeSearchByName=async(req,res)=>{
+
+    let empnm=req.query.empname;
+    // console.log("ok")
+    console.log(req.query.empname);
+    // res.send("Hello!!!")
+    const docs=await EmpModel.find({empname:{$regex:empnm}});
+    console.log(docs)
+    res.send(docs);
+ }
+
 module.exports={
      empDataSave,
      empDatadisplay,
      empSearch,
      employeeUpdateDisplay,
      employeeDataDelete,
-     employeeEditData
+     employeeEditData,
+     employeeEditSave,
+     employeeSearchByName
 }

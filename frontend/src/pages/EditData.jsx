@@ -18,19 +18,41 @@ useEffect(() => {
   loadData();
 }, []);
 
+
+const handleInput=(e)=>{
+  let name=e.target.name;
+  let value=e.target.value;
+  setMydata(values=>({...values,[name]:value}))
+  console.log(mydata);
+}
+
+const handleSubmit=()=>{
+  let api = "http://localhost:8000/employees/employeeeeditsave";
+  axios.post(api,mydata).then((res)=>{
+    alert("Data Upated!!!")
+  })
+
+}
 return (
+  <center>
   <>
-    <h1>Edit Employee Data</h1>
-    Edit Emp no <input type="text" value={mydata.empno} />
+    <h4>Edit Employee Data</h4>
+    <form action="">
+     Emp no <input type="text" name="empno" value={mydata.empno}onChange={handleInput}  />
     <br />
-    Edit Emp name <input type="text" value={mydata.empname} />
+     Name <input type="text" name="empname" value={mydata.empname}  onChange={handleInput}/>
     <br />
-    Edit Degignation <input type="text" value={mydata.degignation} />
+    Degignation <input type="text" name="degignation" value={mydata.degignation} onChange={handleInput} />
     <br />
-    Edit City <input type="text" value={mydata.city} />
+    City <input type="text" name="city" value={mydata.city}  onChange={handleInput} />
     <br />
-    Edit Salary <input type="text" value={mydata.salary} />
+    Salary <input type="text" name="salary" value={mydata.salary} onChange={handleInput}  />
+    <br />
+    <button onClick={handleSubmit}>Edit Save!</button>
+    </form>
   </>
+  </center>
+  
 );
 }
 export default EditData;

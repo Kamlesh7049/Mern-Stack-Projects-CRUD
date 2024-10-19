@@ -26,6 +26,9 @@ const Header = () => {
               <Nav.Link as={Link} to="/search" className="nav-link-custom">
                 Search
               </Nav.Link>
+              <Nav.Link as={Link} to="/searchbyname" className="nav-link-custom">
+                SearchByName
+              </Nav.Link>
               <Nav.Link as={Link} to="/update" className="nav-link-custom">
                 Update
               </Nav.Link>
