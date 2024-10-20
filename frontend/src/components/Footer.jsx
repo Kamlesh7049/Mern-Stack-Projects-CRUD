@@ -15,7 +15,7 @@ const Footer = () => {
         .footer {
           background-color: #343a40;
           color: white;
-          padding: 20px 0;
+          padding: 10px 0;
           text-align: center;
           position: fixed;
           bottom: 0;

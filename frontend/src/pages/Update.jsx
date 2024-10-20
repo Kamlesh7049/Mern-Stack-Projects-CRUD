@@ -49,9 +49,9 @@ const myrecEdit=(id)=>{
           <td>{key.city}</td>
           <td>{key.salary}</td>
           <td>
-            <a href="#" onClick={()=>{myrecEdit(key._id)}}>
+            <a href="#" onClick={()=>{myrecEdit(key._id)}} style={{marginRight:"10px"}}>
               <img src={A} width="20" height="20" />
-            </a>
+            </a> 
             <a href="#" onClick={()=>{myrecDel(key._id)}}>
               <img src={B} width="20" height="20" />
             </a>
@@ -84,6 +84,7 @@ const myrecEdit=(id)=>{
             <th>Degignation</th>
             <th>City</th>
             <th>Salary</th>
+            <th>Actions</th>
           </tr>
           {ans}
           </thead>

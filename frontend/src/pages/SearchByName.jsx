@@ -1,10 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
 import Table from 'react-bootstrap/Table';
-// import {message} from "antd";
+import {message} from "antd";
 const SearchByName=()=>{
     const [empname,setEmpname]=useState("");
     const [mydata,setMydata]=useState([]);
+    const [emptydata,setEptdata]=useState("");
 
 
     const handleInput=(e)=>{
@@ -12,7 +13,15 @@ const SearchByName=()=>{
         let api = `http://localhost:8000/employees/employeesearchbyname/?empname=${empname}`;
         axios.get(api).then((res)=>{
             console.log(res.data);
+
+            setEptdata()
+
             setMydata(res.data)
+            if(res.data.length==0)
+            {
+                message.error("No Record Found!")
+               
+            }
         })
         
     }
@@ -44,6 +53,7 @@ const SearchByName=()=>{
             <th>Salary</th>
           </tr>
           {ans}
+          {emptydata}
           </thead>
           </Table>
        </>

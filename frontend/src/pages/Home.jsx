@@ -28,7 +28,7 @@ const Home = () => {
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 100vh;
+          height: 80vh;
           background-color: #f8f9fa;
           padding: 20px;
           box-sizing: border-box;
