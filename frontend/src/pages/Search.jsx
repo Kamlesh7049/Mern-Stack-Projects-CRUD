@@ -43,7 +43,7 @@ const Search=()=>{
         <center>
         <h4> Search Employee Records</h4>
         Enter Employee Number : <input type="text" value={empno}onChange={(e)=>{setEmpno(e.target.value)}}/>
-        <button onClick={handleSubmit}> Search!</button>
+        <button onClick={handleSubmit}> Search</button>
         <br /><br />
         {/* <hr /> */}
         {/* <table border={1}>

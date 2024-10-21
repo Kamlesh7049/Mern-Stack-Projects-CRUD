@@ -39,7 +39,7 @@ const Insert = () => {
         <Row className="justify-content-center">
           <Col md={6}>
             <div className="form-container" style={{ padding: "20px", borderRadius: "10px", backgroundColor: "#f9f9f9", boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)" }}>
-              <h4 className="text-center mb-4"> Employees Details</h4>
+              <h4 className="text-center mb-4"> Insert Employee Details</h4>
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formEmployeeNo">
                   <Form.Label>Employee No</Form.Label>

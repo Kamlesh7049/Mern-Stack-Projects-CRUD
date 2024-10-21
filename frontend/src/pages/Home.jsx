@@ -6,10 +6,10 @@ const Home = () => {
           <h2>Welcome to Your Employee Portal</h2>
           <p>Efficiently manage and track employee data in one place.</p>
           <div className="button-group">
-            <a href="/insert" className="btn btn-primary">
+            <a href="/insert" className="btn btn-primary" aria-label="Add a new employee">
               Add Employee
             </a>
-            <a href="/display" className="btn btn-secondary">
+            <a href="/display" className="btn btn-secondary" aria-label="View existing employees">
               View Employees
             </a>
           </div>
@@ -17,7 +17,7 @@ const Home = () => {
         <div className="image-container">
           <img
             src="https://media.licdn.com/dms/image/D4D12AQEBEsIJX8mtHg/article-cover_image-shrink_720_1280/0/1702198866773?e=2147483647&v=beta&t=3_pyHt0P7c44VQNsAYpqjVnWhlWErZcpK72WyW5xiXk"
-            alt="IT Company"
+            alt="A modern IT company office setting"
             className="side-image"
           />
         </div>
@@ -25,7 +25,7 @@ const Home = () => {
 
       <style jsx>{`
         .home-container {
-          display: flex;
+          display: flex;   
           justify-content: center;
           align-items: center;
           height: 80vh;
@@ -39,6 +39,7 @@ const Home = () => {
           color: #343a40;
           text-align: left;
           padding: 20px;
+          animation: fadeIn 1s ease-in;
         }
 
         h2 {
@@ -47,6 +48,7 @@ const Home = () => {
           margin-bottom: 15px;
           color: #343a40;
           letter-spacing: 1px;
+          animation: slideIn 0.8s ease-out;
         }
 
         p {
@@ -54,11 +56,13 @@ const Home = () => {
           margin-bottom: 40px;
           color: #6c757d;
           line-height: 1.5;
+          animation: slideIn 1s ease-out;
         }
 
         .button-group {
           display: flex;
           gap: 20px;
+          animation: fadeIn 1.2s ease-in;
         }
 
         .btn {
@@ -130,6 +134,26 @@ const Home = () => {
           .button-group {
             flex-direction: column;
             gap: 10px;
+          }
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideIn {
+          0% {
+            transform: translateY(-20px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
           }
         }
       `}</style>
