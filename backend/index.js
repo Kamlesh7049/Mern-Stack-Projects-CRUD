@@ -12,6 +12,7 @@ mongoose.connect(process.env.DBCONNECTION).then(()=>{
 const port=process.env.PORT || 3000
 app.use(cors());
 //body-parser middleware
+
 app.use(bodyparser.urlencoded({extended: true}))
 app.use(bodyparser.json())
 app.use("/employees",empRoute);
